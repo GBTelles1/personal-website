@@ -48,7 +48,6 @@ export const HomeContainer = styled.div`
     bottom: 30px;
     right: 40px;
 
-    /* font-size: 1rem; */
     font-weight: bold;
     color: #17161A;
   }
@@ -78,15 +77,6 @@ export const TitleContainer = styled.div`
       font-size: 2.5rem;
     }
   }
-
-  p {
-    font-size: 2rem;
-    color: #1A202C;
-
-    ${({ theme }) => theme.breakpoints.down('sm')} {
-      font-size: 1.5rem;
-    }
-  }
 `
 
 const animatedMessageHeight = 40
@@ -105,6 +95,21 @@ const textAnimation = keyframes`
   100% {margin-top: 0;}
 `
 
+const animatedMessageHeightMobile = 30
+
+const textAnimationMobile = keyframes`
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: calc(-1*(${animatedMessageHeightMobile}px + ${animatedMessageParagraphsGap}rem));}
+  30% {margin-top: calc(-1*(${animatedMessageHeightMobile}px + ${animatedMessageParagraphsGap}rem));}
+  40% {margin-top: calc(-2*(${animatedMessageHeightMobile}px + ${animatedMessageParagraphsGap}rem));}
+  60% {margin-top: calc(-2*(${animatedMessageHeightMobile}px + ${animatedMessageParagraphsGap}rem));}
+  70% {margin-top: calc(-1*(${animatedMessageHeightMobile}px + ${animatedMessageParagraphsGap}rem));}
+  80% {margin-top: calc(-1*(${animatedMessageHeightMobile}px + ${animatedMessageParagraphsGap}rem));}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
+`
+
 export const AnimatedMessage = styled.div`
   display: flex;
   flex-direction: column;
@@ -115,14 +120,21 @@ export const AnimatedMessage = styled.div`
   overflow: hidden;
 
   font-weight: bold;
-  font-size: 1.2rem;
+
+  font-size: 2rem;
+  color: #1A202C;
 
   p:first-child {
     animation: ${textAnimation} 10s infinite;
+
+    ${({ theme }) => theme.breakpoints.down('sm')} {
+      animation: ${textAnimationMobile} 10s infinite;
+    }
   }
 
   ${({ theme }) => theme.breakpoints.down('sm')} {
     padding: 0 0.5rem;
+    font-size: 1.5rem;
     background: #F2EDE7;
     opacity: 70%;
     border-radius: 10px;
