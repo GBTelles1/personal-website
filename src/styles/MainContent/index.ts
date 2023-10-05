@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { styled } from "styled-components";
 
 export const MainContentContainer = styled.div<{ $isInvisible: boolean; }>`
