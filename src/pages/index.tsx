@@ -16,6 +16,8 @@ const hammersmith = Hammersmith_One({
 
 export default function Home() {
   const isLargerThan1201 = useMediaQuery(useTheme()?.breakpoints.up('xl'));
+
+  // @ts-ignore
   const isLargerThan361 = useMediaQuery(useTheme()?.breakpoints.up('xs'));
 
   const myName = isLargerThan1201 ? 'GABRIEL BERNARDO TELLES' : 'GABRIEL TELLES';
