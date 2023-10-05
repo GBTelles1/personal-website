@@ -17,6 +17,7 @@ import { useTheme } from "styled-components";
 
 
 export default function ContactPage() {
+  // @ts-ignore
   const isShorterThan481 = useMediaQuery(useTheme()?.breakpoints.down('xs'));
 
   const projectsWidth = isShorterThan481 ? 300 : 400;

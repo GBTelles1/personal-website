@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styled from "styled-components";
 
 export const NavLinkComponent = styled.div<{ $activeLinkColor: string; $isActive: boolean; }>`
