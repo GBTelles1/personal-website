@@ -38,7 +38,6 @@ export const AboutContentContainer = styled.div`
   p {
     color: #CBD5E0;
     flex-basis: 30%;
-    max-height: 7.75rem;
     max-width: 21rem;
   }
 
@@ -52,17 +51,13 @@ export const AboutContentContainer = styled.div`
   }
 `
 
-export const MyHistoryFirstSection = styled.div`
+export const MyHistorySection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
   gap: 1rem;
-
-  p {
-    width: 15rem;
-  }
 `
 
 export const FlagsContainer = styled.div`
@@ -73,38 +68,10 @@ export const FlagsContainer = styled.div`
   width: 15rem;
 `
 
-export const MyHistorySecondSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-  gap: 2rem;
-`
-
-export const MyHistoryThirdSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-  gap: 1rem;
-`
-
 export const LinksContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-`
-
-export const LinkButton = styled.div`
-  min-width: 15rem;
-  padding: 1rem;
-  border-radius: 8px;
-  background: #5CA0C5;
-
-  color: #17161A;
-  font-weight: bold;
 `
