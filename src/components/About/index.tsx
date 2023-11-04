@@ -1,10 +1,10 @@
-import { MainContent } from "@/layouts/MainContent";
-import { AboutContentContainer, AboutPageTitle, FlagsContainer, LinksContainer, MyHistorySection } from "./styles";
-import { Avatar } from "../Avatar";
+import { MainContent } from '@/layouts/MainContent';
+import { AboutContentContainer, AboutPageTitle, FlagsContainer, LinksContainer, MyHistorySection } from './styles';
+import { Avatar } from '../Avatar';
 import Image from 'next/image';
 
-import { brazilFlag, briefcaseIcon, bulgariaFlag, graduationIcon, netherlandsFlag, spainFlag, worldIcon } from "../../../public";
-import LinkButton from "./components/LinkButton";
+import { brazilFlag, briefcaseIcon, bulgariaFlag, graduationIcon, netherlandsFlag, spainFlag, worldIcon } from '../../../public';
+import LinkButton from './components/LinkButton';
 
 export default function AboutPage() {
   function getMyAge(birthDateString: string = '1999-03-06'): number {
@@ -16,7 +16,7 @@ export default function AboutPage() {
     const diffMonths = today.getMonth() - birthDate.getMonth();
 
     if (diffMonths < 0 || (diffMonths === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
+      age--;
     }
 
     return age;
@@ -38,7 +38,7 @@ export default function AboutPage() {
           </p>
 
           <p>
-            Living in Europe since June 2023
+            Experiencing Europe
           </p>
 
           <FlagsContainer>
@@ -86,7 +86,7 @@ export default function AboutPage() {
 
         <MyHistorySection>
           <p>
-            Then I started to work as a Full Stack Developer volunteer with
+            Then I started to work as a Full Stack Developer with
             Django, and, later, as a Front End Developer in another startup
             using React, Next, and Typescript.
           </p>
@@ -94,8 +94,9 @@ export default function AboutPage() {
           <Image src={worldIcon} width={40} height={40} alt="World icon"/>
           
           <p>
-            I&apos;m passionate about learning and teaching and believe
-            Education is a key to a better world.
+            Passionate about learning and teaching, I believe sharing knowledge
+            is the key to a better world. So there are no impossible challenges
+            for me as I&apos;ll learn everything needed.
           </p>
 
           <LinksContainer>
@@ -107,5 +108,5 @@ export default function AboutPage() {
       </AboutContentContainer>
   
     </MainContent>
-  )
+  );
 }

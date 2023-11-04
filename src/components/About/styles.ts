@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const AboutPageTitle = styled.h2`
   min-width: 100vw;
@@ -13,7 +13,7 @@ export const AboutPageTitle = styled.h2`
   ${({ theme }) => theme.breakpoints.down('sm')} {
     padding: 0.5rem 2rem;
   }
-`
+`;
 
 export const AboutContentContainer = styled.div`
   display: flex;
@@ -49,7 +49,7 @@ export const AboutContentContainer = styled.div`
     flex-direction: column;
     align-items: center;
   }
-`
+`;
 
 export const MyHistorySection = styled.div`
   display: flex;
@@ -58,7 +58,7 @@ export const MyHistorySection = styled.div`
   align-items: center;
 
   gap: 1rem;
-`
+`;
 
 export const FlagsContainer = styled.div`
   display: flex;
@@ -66,7 +66,7 @@ export const FlagsContainer = styled.div`
   align-items: center;
 
   width: 15rem;
-`
+`;
 
 export const LinksContainer = styled.div`
   display: flex;
@@ -74,4 +74,4 @@ export const LinksContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-`
+`;

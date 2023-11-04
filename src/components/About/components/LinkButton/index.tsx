@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { LinkButtonContainer } from "./styles";
+import Link from 'next/link';
+import { LinkButtonContainer } from './styles';
 
 interface LinkButtonProps {
   url: string;
@@ -13,5 +13,5 @@ export default function LinkButton({ url, text }: LinkButtonProps) {
         {text}
       </Link>
     </LinkButtonContainer>
-  )
+  );
 }

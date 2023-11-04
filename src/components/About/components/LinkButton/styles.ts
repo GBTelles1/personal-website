@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const LinkButtonContainer = styled.div`
   min-width: 15rem;
@@ -8,4 +8,4 @@ export const LinkButtonContainer = styled.div`
 
   color: #17161A;
   font-weight: bold;
-`
+`;
