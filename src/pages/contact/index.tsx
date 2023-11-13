@@ -1,57 +1,49 @@
-import { MainContent } from "@/layouts/MainContent";
+import { MainContentLayout } from '@/layouts/MainContentLayout';
 import {
   ContactContentContainer,
   ContactPageContainer,
-  ContactPageTitle,
   AmsterdamPhoto,
-} from "@/styles/pages/Contact";
-import {
-  EnvelopeSimple,
-  GithubLogo,
-  LinkedinLogo,
-  WhatsappLogo
-} from "@phosphor-icons/react";
-import Image from "next/image";
-import amsterdamPicture from "./../../../public/nightAmsterdam.jpg"
+} from '@/styles/pages/Contact';
+import { GithubLogo, LinkedinLogo, } from '@phosphor-icons/react';
+import Image from 'next/image';
+import amsterdamPicture from './../../../public/nightAmsterdam.jpg';
 
 export default function ContactPage() {
   return (
-    <MainContent>
-      <ContactPageTitle>CONTACT ME</ContactPageTitle>
-
+    <MainContentLayout pageTitle='CONTACT ME' pageTitleColor='#E3BAA6'>
       <ContactPageContainer>
         <ContactContentContainer>
-            <div>
-              <p>EMAIL ADDRESS</p>
-              <span>gbertelles@gmail.com</span>
-            </div>
+          <div>
+            <p>EMAIL ADDRESS</p>
+            <span>gbertelles@gmail.com</span>
+          </div>
 
-            <div>
-              <p>PHONE NUMBER</p>
-              <span>+31 6 87735679</span>
-            </div>
+          <div>
+            <p>PHONE NUMBER</p>
+            <span>+31 6 87735679</span>
+          </div>
             
-            <div>
-              <p>LINKEDIN PROFILE</p>
-              <a
-                href="https://www.linkedin.com/in/gabriel-b-telles/"
-                target="_blank"
-              >
-                <LinkedinLogo size={'1.5rem'} color="#E2E8F0" />
-                <span>Gabriel Telles</span>
-              </a>
-            </div>
+          <div>
+            <p>LINKEDIN PROFILE</p>
+            <a
+              href="https://www.linkedin.com/in/gabriel-b-telles/"
+              target="_blank"
+            >
+              <LinkedinLogo size={'1.5rem'} color="#E2E8F0" />
+              <span>Gabriel Telles</span>
+            </a>
+          </div>
             
-            <div>
-              <p>GITHUB PROFILE</p>
-              <a
-                href="https://github.com/GBTelles1"
-                target="_blank"
-              >
-                <GithubLogo size={'1.5rem'} color="#E2E8F0" />
-                <span>GBTelles1</span>
-              </a>
-            </div>
+          <div>
+            <p>GITHUB PROFILE</p>
+            <a
+              href="https://github.com/GBTelles1"
+              target="_blank"
+            >
+              <GithubLogo size={'1.5rem'} color="#E2E8F0" />
+              <span>GBTelles1</span>
+            </a>
+          </div>
         </ContactContentContainer>
 
         <AmsterdamPhoto>
@@ -67,6 +59,6 @@ export default function ContactPage() {
           />
         </AmsterdamPhoto>
       </ContactPageContainer>
-    </MainContent>
-  )
+    </MainContentLayout>
+  );
 }

@@ -1,18 +1,18 @@
-import { MainContent } from '@/layouts/MainContent'
+import { MainContentLayout } from '@/layouts/MainContentLayout';
 import {
   HomeContainer,
   AnimatedMessage,
   TitleContainer
-} from '@/styles/pages/Home'
+} from '@/styles/pages/Home';
 import { useMediaQuery } from 'styled-breakpoints/use-media-query';
-import Link from 'next/link'
-import { Hammersmith_One } from 'next/font/google'
+import Link from 'next/link';
+import { Hammersmith_One } from 'next/font/google';
 import { useTheme } from 'styled-components';
 
 const hammersmith = Hammersmith_One({
   weight: '400',
   subsets: ['latin']
-})
+});
 
 export default function Home() {
   const isLargerThan1201 = useMediaQuery(useTheme()?.breakpoints.up('xl'));
@@ -23,7 +23,7 @@ export default function Home() {
   const myName = isLargerThan1201 ? 'GABRIEL BERNARDO TELLES' : 'GABRIEL TELLES';
 
   return (
-    <MainContent isHomePage>
+    <MainContentLayout isHomePage>
       <HomeContainer>
         <TitleContainer>
           <h1 className={hammersmith.className}>{myName}</h1>
@@ -41,6 +41,6 @@ export default function Home() {
         
         <span>Rio de Janeiro, Brasil</span>
       </HomeContainer>
-    </MainContent>
-  )
+    </MainContentLayout>
+  );
 }
