@@ -1,22 +1,22 @@
-import { MainContent } from "@/layouts/MainContent";
-import { WorkPageTitle, WorkPageContainer, ProjectContainer, WorkContainer, DescriptionContainer, IconsContainer } from "@/styles/pages/Work";
+import { MainContentLayout } from '@/layouts/MainContentLayout';
+import { WorkPageContainer, ProjectContainer, WorkContainer, DescriptionContainer, IconsContainer } from '@/styles/pages/Work';
 
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
-import voluntariosPicture from "./../../../public/volutariosPic.jpg";
-import infoProductPicture from "./../../../public/infoProduct.jpg";
-import pomodoroTimerPicture from "./../../../public/pomodoroTimer.jpg";
-import toDoPicture from "./../../../public/toDo.jpg";
-import pythonIcon from "./../../../public/pythonIcon.png";
-import typesIcon from "./../../../public/typescriptIcon.png";
-import jsIcon from "./../../../public/jsIcon.png";
-import reactIcon from "./../../../public/reactIcon.png";
-import { useMediaQuery } from "styled-breakpoints/use-media-query";
-import { useTheme } from "styled-components";
+import voluntariosPicture from './../../../public/volutariosPic.jpg';
+import infoProductPicture from './../../../public/infoProduct.jpg';
+import pomodoroTimerPicture from './../../../public/pomodoroTimer.jpg';
+import toDoPicture from './../../../public/toDo.jpg';
+import pythonIcon from './../../../public/pythonIcon.png';
+import typesIcon from './../../../public/typescriptIcon.png';
+import jsIcon from './../../../public/jsIcon.png';
+import reactIcon from './../../../public/reactIcon.png';
+import { useMediaQuery } from 'styled-breakpoints/use-media-query';
+import { useTheme } from 'styled-components';
 
 
-export default function ContactPage() {
+export default function MyWork() {
   // @ts-ignore
   const isShorterThan481 = useMediaQuery(useTheme()?.breakpoints.down('xs'));
 
@@ -24,9 +24,7 @@ export default function ContactPage() {
   const projectsHeight = 225;
 
   return (
-    <MainContent>
-      <WorkPageTitle>MY WORK</WorkPageTitle>
-
+    <MainContentLayout pageTitle='MY WORK' pageTitleColor='#FBA083'>
       <WorkPageContainer>
         <WorkContainer>
           <ProjectContainer>
@@ -36,7 +34,7 @@ export default function ContactPage() {
               height={projectsHeight}
               alt={''}
             />
-            <h3>TheMembers: platform for info producers</h3>
+            <h3>TheMembers: info product platform</h3>
             <DescriptionContainer>
               <p>
                 Improved the refresh-token system,
@@ -69,12 +67,12 @@ export default function ContactPage() {
               height={projectsHeight}
               alt={''}
             />
-            <h3>Voluntarios: Volunteering hub in Brazil</h3>
+            <h3>Voluntarios: volunteering hub in Brazil</h3>
             <DescriptionContainer>
               <p>
-                I work as volunteer on both front and back ends,
-                improving the entity form with auto complete inputs. I also
-                wrote the first unit tests in Django.
+                I&apos;ve worked on both front and back ends. Improved the
+                Entity creation form with auto-complete inputs and wrote the
+                first unit tests in Django.
               </p>
               <p>Stack: Django, Javascript, Bootstrap, PostgreSQL</p>
             </DescriptionContainer>
@@ -105,8 +103,8 @@ export default function ContactPage() {
             <h3>ToDo App: online task management</h3>
             <DescriptionContainer>
               <p>
-                This project was created as portfolio. The idea was to create
-                a place where I can check all the things I need to do in a day.
+                I&apos;ve developed this project as portfolio. The idea was to
+                create a place to check everything I need to do in a day.
               </p>
               <p>Stack: React, Typescript</p>
             </DescriptionContainer>
@@ -160,6 +158,6 @@ export default function ContactPage() {
         </WorkContainer>
         
       </WorkPageContainer>
-    </MainContent>
-  )
+    </MainContentLayout>
+  );
 }

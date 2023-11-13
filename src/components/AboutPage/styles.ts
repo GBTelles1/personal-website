@@ -1,20 +1,5 @@
 import styled from 'styled-components';
 
-export const AboutPageTitle = styled.h2`
-  min-width: 100vw;
-  padding: 0.5rem 2.75rem;
-
-  background-color: #5CA0C5;
-  opacity: 80%;
-
-  color: #17161A;
-  letter-spacing: 0.2em;
-
-  ${({ theme }) => theme.breakpoints.down('sm')} {
-    padding: 0.5rem 2rem;
-  }
-`;
-
 export const AboutContentContainer = styled.div`
   display: flex;
   justify-content: space-between;

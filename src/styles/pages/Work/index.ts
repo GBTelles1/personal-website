@@ -1,20 +1,5 @@
 // @ts-nocheck
-import styled from "styled-components";
-
-export const WorkPageTitle = styled.h2`
-  min-width: 100vw;
-  padding: 0.5rem 2.75rem;
-
-  background-color: #FBA083;
-  opacity: 80%;
-
-  color: #17161A;
-  letter-spacing: 0.5rem;
-
-  ${({ theme }) => theme.breakpoints.down('sm')} {
-    padding: 0.5rem 2rem;
-  }
-`
+import styled from 'styled-components';
 
 export const WorkPageContainer = styled.main`
   display: flex;
@@ -27,7 +12,7 @@ export const WorkPageContainer = styled.main`
     flex-direction: column;
     align-items: center;
   }
-`
+`;
 export const WorkContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -41,7 +26,7 @@ export const WorkContainer = styled.div`
   column-gap: 2rem;
   row-gap: 4rem;
   }
-`
+`;
 
 export const ProjectContainer = styled.div`
   display: flex;
@@ -106,7 +91,7 @@ export const ProjectContainer = styled.div`
   ${({ theme }) => theme.breakpoints.down('xs')} {
     width: 300px;
   }
-`
+`;
 export const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -130,11 +115,11 @@ export const DescriptionContainer = styled.div`
       font-size: 0.8rem;
     }
   }
-`
+`;
 
 export const IconsContainer = styled.span`
   display: flex;
   position: absolute;
   margin-top: 180px;
   gap: 1rem;
-`
+`;
