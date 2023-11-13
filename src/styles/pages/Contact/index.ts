@@ -1,19 +1,4 @@
-import styled from "styled-components";
-
-export const ContactPageTitle = styled.h2`
-  min-width: 100vw;
-  padding: 0.5rem 2.75rem;
-
-  background-color: #E3BAA6;
-  opacity: 80%;
-
-  color: #17161A;
-  letter-spacing: 0.2em;
-
-  ${({ theme }) => theme.breakpoints.down('sm')} {
-    padding: 0.5rem 2rem;
-  }
-`
+import styled from 'styled-components';
 
 export const ContactPageContainer = styled.div`
   display: flex;
@@ -27,7 +12,7 @@ export const ContactPageContainer = styled.div`
     padding-top: 1rem;
     gap: 1rem;
   }
-`
+`;
 
 export const ContactContentContainer = styled.div`
   display: flex;
@@ -58,7 +43,7 @@ export const ContactContentContainer = styled.div`
       gap: 0.5rem;
     }
   }
-`
+`;
 
 export const AmsterdamPhoto = styled.div`
   width: 50%;
@@ -66,4 +51,4 @@ export const AmsterdamPhoto = styled.div`
   ${({ theme }) => theme.breakpoints.down('md')} {
     width: 100%;
   }  
-`
+`;
